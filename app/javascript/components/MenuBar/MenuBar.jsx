@@ -1,6 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import MenuButton from './MenuButton';
+import GameButton from '../helpers/GameButton';
 import {withRouter} from 'react-router-dom'
 
 class MenuBar extends React.Component{
@@ -17,8 +16,8 @@ class MenuBar extends React.Component{
 
   render(){
     return(
-    <div> 
-      <MenuButton text="Quit" buttonType="danger" onClick={this.quitGame}/>
+    <div id="MenuBar"> 
+      <GameButton text="Quit" buttonType="danger" onClick={this.quitGame}/>
     </div>
     )
   }

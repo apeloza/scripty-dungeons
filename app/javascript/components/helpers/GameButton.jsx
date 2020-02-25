@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MenuButton = props => (
+const GameButton = props => (
     <>
     <button onClick={props.onClick} className={"btn btn-" + props.buttonType}>{props.text}</button>
     </>
 );
 
-export default MenuButton;
+export default GameButton;

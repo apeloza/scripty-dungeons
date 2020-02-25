@@ -1,0 +1,79 @@
+#MapScene{
+  align-items: center;
+}
+
+.map-space{
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border: 1px black solid;
+}
+
+.map-spaces{
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+// .map-line{
+//   height: 1px;
+//   border: 1px black solid;
+//   width: 100px;
+//   margin-top: 1rem;
+// }
+
+// rom
+
+// these would go in util/vars or util/colors normally but here they are for ez reference
+// some color names are practical and meant to tweak "harsh black" (color theorists don't like it?
+// this is old 2004 era web design book for UXers knowledge lol but I still see stuff like it today)
+// honestly I like and miss that book it had good solid basic UX in flash in the pan 2000s styles
+$c_black: #1b1b1b; // soft black neutral I like, sometimes it's good to add a bit of color but meh
+$c_white: #efefef;
+
+// contextual color names are easy to change later ... sometimes?
+$c_space_default: #ccc;
+$c_space_grass: #a7ee4b;
+$c_space_grass_border: darken($c_space_grass, 20%); // scss, not css ... unless recently? idk
+$c_space_water: #4556eb;
+$c_space_water_border: darken($c_space_water, 20%); // scss, not css ... unless recently? idk
+
+
+.map-line {
+  height: 16px;
+  background-color: $c_black;
+  width: 100px;
+  margin-top: 2rem;
+}
+
+.map-space-container{
+  display: flex;
+}
+
+#MapScene {
+  align-items: center; // this is a dupe of above but I didn't want to tweak your code 
+  padding: 150px;
+}
+
+// new styling for spaces
+.map-space {
+  border: $c_black 10px solid; // you could make this a different 
+  background-color: $c_space_default; // you could make this a color
+  border-radius: 50%;   
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-space_grass {
+  background-color: $c_space_grass;
+  border-color: $c_space_grass_border; // override only the border color ... useful now, less so later?
+}
+
+.map-space_water{
+  background-color: $c_space_water;
+  border-color: $c_space_water_border;
+}

@@ -1,0 +1,13 @@
+#GameScreen{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#SceneContainer{
+  flex-grow: 4;
+}
+
+#MenuBar{
+  flex-grow: 1;
+}
